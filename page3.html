@@ -1,0 +1,102 @@
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="description">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="master4.css">
+        <title> Contact</title>
+        <link rel="icon" href="prodcast/logo.png" type="image/icon type">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" >Home</a>
+        <a href="page1.html">Future cars</a>
+        <a href="page2.html">Models & Prices</a>
+        <a href="page4.html">About</a>
+        <a href="page3.html"class="active">Sign Up</a>
+        <a href="javascript:void(0);" class="icon" onclick="isFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+           
+            </div>
+        <div class="container">
+          <form id="form" onsubmit="return validate_pass()" action="index.html">
+              <div class="row">
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="First name.." required>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.."required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-75">
+                  <input type="tel" id="fname" name="lastname" placeholder="Your telephone number..." required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-75">
+                  <input type="email" id="fname" name="firstname" placeholder="Your E-mail.."required>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-75">
+                  <input type="password" id="psw" name="psw" pattern="^(?=[A-Z]{1})(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#&*_-]).{8}$" placeholder="password.."required title="The password must start with uppercase character, include 8 characters only and one digit at least and one special character">
+                </div>
+              </div>
+            
+            <div class="row">
+                <div class="col-75">
+            <input type="date" id="birthday" name="birthday"required>
+        </div>
+    </div>
+    
+            <div class="row">
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                    
+            </div>
+            <br><br>
+              <div class="row">
+                <input type="submit" value="Submit">>
+              </div>
+            </form>
+          </div>
+          <script>
+           
+              function isFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+              function validate_pass()
+ {
+     let x=document.forms['form']['psw'].value;
+      let pat=/^(?=[A-Z]{1})(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#&*_-]).{8}$/;
+  if(pat.test(x))
+     {
+          
+        return true;
+     }
+     else
+     {
+          return false;
+     }
+ }
+              </script>
+              
+    </body>
+</html>
